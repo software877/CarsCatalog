@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/catalog_fragment"
+    android:id="@+id/main_navigation">
+    <fragment
+        android:id="@+id/catalog_fragment"
+        android:name="com.d3f.musclecarscatalog.screens.CatalogFragment"
+        android:label=""
+        tools:layout="@layout/catalog_fragment">
+        <action
+            android:id="@+id/action_to_car_details_fragment"
+            app:destination="@id/carDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="com.d3f.musclecarscatalog.screens.CarDetailsFragment"
+        android:label=""
+        tools:layout="@layout/car_details_fragment">
+        <action
+            android:id="@+id/action_to_catalog_cars"
+            app:destination="@id/catalog_fragment" />
+    </fragment>
+</navigation>
